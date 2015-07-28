@@ -1,0 +1,5 @@
+#!/bin/sh
+cpuTemp=$(cat /sys/class/thermal/thermal_zone0/temp)
+cpu=$(echo $cpuTemp 1000 | awk '{printf("%.2f", ($1/$2))}')
+echo $cpu
+mosquitto_pub -h api.xively.com -u 94lzPj0kzcO5aEEnTIYmvw2kObdAe4zKaGXgQbB3PeLI0tmS -t /v2/feeds/815867354.csv -m "CPU,$cpu"
