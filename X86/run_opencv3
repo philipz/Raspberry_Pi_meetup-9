@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -ti --rm -v ~/github/docker-opencv3:/cv philipz/opencv3_python2.7

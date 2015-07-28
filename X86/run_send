@@ -1,0 +1,2 @@
+#!/bin/bash
+docker save philipz/rpi-alpine-mqtt | gzip | ssh philipz@192.168.2.15 docker load
